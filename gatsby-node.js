@@ -6,7 +6,7 @@ exports.createPages = async ({ graphql, actions }) => {
     query MyQuery {
         allContentfulRecipes {
             nodes {
-                id
+                slug
                 name
                 description {
                     description
@@ -23,7 +23,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const productTemplate = path.resolve(`src/templates/recipe-page.js`)
   queryResults.data.allContentfulRecipes.nodes.forEach(node => {
     createPage({
-      path: `/recipe/${node.id}`,
+      path: `/recipe/${node.slug}`,
       component: productTemplate,
       context: {
         // This time the entire product is passed down as context

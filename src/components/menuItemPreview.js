@@ -10,10 +10,9 @@ export default function MenuItemPreview({recipe}) {
 			</div>
 			<div className="col-sm-8 col-md-6 col-lg-8">
                 <h3>{recipe.name}</h3>
-                <h4>{recipe.category.name}</h4>
 				<p dangerouslySetInnerHTML={{ __html: recipe.description.description }}></p>
 
-                <Link to={"/recipe/" + recipe.id} className="call-to-action">Learn More</Link>
+                <Link to={"/recipe/" + recipe.slug} className="call-to-action">Learn More</Link>
 			</div>
 		</div>
         </>
