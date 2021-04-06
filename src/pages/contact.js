@@ -12,6 +12,8 @@ export default function Contact() {
 
             <form name="contact" method="POST" data-netlify="true" action="/thankyou">
 
+            <input type="hidden" name="form-name" value="contact" />
+
             <div className="row">
                 <div className="col-sm-4">
                     <label for="fullname">Your Name</label>
