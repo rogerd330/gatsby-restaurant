@@ -1,9 +1,12 @@
 import React from "react"
 import Default from "../layouts/default.js"
+import SEO from "../components/seo.js"
 
 export default function About() {
     return (
         <Default>
+
+            <SEO title="About Dickey's Grille"></SEO>
 
             <div className="row">
                 <div className="col-sm-8">
