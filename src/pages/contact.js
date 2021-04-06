@@ -10,7 +10,7 @@ export default function Contact() {
 
             <h1>Contact Us</h1>
 
-            <form name="contact" method="POST" data-netlify="true" action="/pages/thankyou">
+            <form name="contact" method="POST" data-netlify="true" action="/thankyou">
 
             <div className="row">
                 <div className="col-sm-4">
