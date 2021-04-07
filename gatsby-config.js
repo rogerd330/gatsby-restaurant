@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: "Dickey's Grille",
@@ -13,8 +17,8 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: {
-        accessToken: "gR79XR2sare5Gr_-OPehnwmFzi-OHwSM_sDPrkIHGA8",
-        spaceId: "c89v3ldpp2uf",
+        accessToken: process.env.GATSBY_CONTENTFUL_ACCESS_TOKEN,
+        spaceId: process.env.GATSBY_CONTENTFUL_SPACE_ID,
       },
     },
     "gatsby-plugin-sass",
